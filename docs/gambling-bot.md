@@ -66,7 +66,7 @@ A simple Telegram bot for simulating gambling activities.
 - `/balance`: Check your current balance
 - `/bet <amount>`: Place a bet with the specified amount
 - `/roulette <red|black> <amount>`: Play roulette by betting on red or black
-  `/addbalance <amount>`: Add funds to your balance (it's magic!)
+- `/addbalance <amount>`: Add funds to your balance (it's magic!)
 
 ## Live Bot
 
