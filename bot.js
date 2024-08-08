@@ -6,6 +6,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 const users = {};
 
+// Handles the /start command, initializes user and sends welcome message
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   const userId = msg.from.id;
@@ -20,11 +21,13 @@ bot.onText(/\/start/, (msg) => {
       "Commands:\n" +
       "/balance - Check how much imaginary money you have left\n" +
       "/bet <amount> - Try your luck (spoiler: you probably won't have any)\n" +
-      "/roulette <red|black> <amount> - Spin the wheel of misfortune!\n\n" +
+      "/roulette <red|black> <amount> - Spin the wheel of misfortune!\n" +
+      "/addbalance <amount> - Add some imaginary cash to your account (because why not?)\n\n" +
       "Remember, the house always wins... but hey, at least you're having fun, right? 😅"
   );
 });
 
+// Handles the /balance command, shows user's current balance
 bot.onText(/\/balance/, (msg) => {
   const chatId = msg.chat.id;
   const userId = msg.from.id;
@@ -39,6 +42,7 @@ bot.onText(/\/balance/, (msg) => {
   );
 });
 
+// Handles the /bet command, processes a simple bet
 bot.onText(/\/bet (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const userId = msg.from.id;
@@ -64,7 +68,6 @@ bot.onText(/\/bet (.+)/, (msg, match) => {
     return;
   }
 
-  // Simple 50/50 chance of winning
   const win = Math.random() < 0.5;
 
   if (win) {
@@ -84,6 +87,7 @@ bot.onText(/\/bet (.+)/, (msg, match) => {
   }
 });
 
+// Handles the /roulette command, simulates a roulette game
 bot.onText(/\/roulette (red|black) (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const userId = msg.from.id;
@@ -126,6 +130,32 @@ bot.onText(/\/roulette (red|black) (.+)/, (msg, match) => {
       `😭 Oh no! The ball landed on ${winningColor}. You lost $${betAmount}. Your new balance is $${users[userId].balance}. Maybe it's time to consider a career in virtual farming?`
     );
   }
+});
+
+// Handles the /addbalance command, adds funds to user's balance
+bot.onText(/\/addbalance (.+)/, (msg, match) => {
+  const chatId = msg.chat.id;
+  const userId = msg.from.id;
+  const amount = parseInt(match[1]);
+
+  if (!users[userId]) {
+    users[userId] = { balance: 1000 };
+  }
+
+  if (isNaN(amount) || amount <= 0) {
+    bot.sendMessage(
+      chatId,
+      "Nice try, but imaginary money only works in your dreams! How about a real number? 🤑"
+    );
+    return;
+  }
+
+  users[userId].balance += amount;
+  bot.sendMessage(
+    chatId,
+    `💰 Cha-ching! 💰 You've magically added $${amount} to your balance. Your new total is $${users[userId].balance}. ` +
+      `Remember, in this game, money does grow on trees... digital trees, that is! 🌳💻`
+  );
 });
 
 console.log("Bot is running...");
