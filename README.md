@@ -1,14 +1,15 @@
 # Hiring task for Full Stack Developer
 
-In this repository you will find the 3 subtasks for the hiring task.
+In this repository you will find the 3 subtasks for the hiring task and one bonus subtask.
 
 ## Task Structure
 
-The project is divided into three subtasks:
+The project is divided into three subtasks and one subtask:
 
 1. [Understanding Telegram and Its APIs](./docs/telegram-overview.md)
 2. [Basic Telegram Bot Development](./docs/gambling-bot.md)
 3. [Mini-App with Fiat Payment Using Stripe](./docs/mini-app-stripe.md)
+4. [iOS Minimizing Issue Potential Fix[(./docs/ios-telegram-issue.md)
 
 ## Setup and Installation
 
