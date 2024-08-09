@@ -28,9 +28,6 @@ async function handlePayment(amount) {
       paymentResult.textContent = `Payment failed: ${result.error.message}`;
     } else {
       paymentResult.textContent = "Payment successful!";
-      tg.sendData(
-        JSON.stringify({ action: "payment_success", amount: amount })
-      );
     }
   } catch (error) {
     paymentResult.textContent = `Error: ${error.message}`;

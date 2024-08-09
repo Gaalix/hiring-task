@@ -25,6 +25,7 @@ app.post("/create-payment-intent", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
+// Set up LocalTunnel and bot command
 (async () => {
   const tunnel = await localtunnel({ port: PORT });
   console.log(`Tunnel URL: ${tunnel.url}`);
@@ -47,13 +48,3 @@ const PORT = process.env.PORT || 3000;
 
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 })();
-
-bot.on("web_app_data", (msg) => {
-  const data = JSON.parse(msg.web_app_data.data);
-  if (data.action === "payment_success") {
-    bot.sendMessage(
-      msg.chat.id,
-      `Great! Your deposit of ${data.amount / 100}€ was successful.`
-    );
-  }
-});

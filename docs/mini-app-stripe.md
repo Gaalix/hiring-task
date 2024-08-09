@@ -39,8 +39,6 @@
 
 8. The payment process will begin, and you'll see status updates in the payment-result div.
 
-9. If the payment is successful, you'll see a "Payment successful!" message, and the bot will send a confirmation message in the Telegram chat.
-
 ## Code Structure
 
 - `server.js`: Contains the Express server setup, Telegram bot configuration, and routes for handling payment intents.
