@@ -9,7 +9,7 @@ The project is divided into three subtasks and one subtask:
 1. [Understanding Telegram and Its APIs](./docs/telegram-overview.md)
 2. [Basic Telegram Bot Development](./docs/gambling-bot.md)
 3. [Mini-App with Fiat Payment Using Stripe](./docs/mini-app-stripe.md)
-4. [iOS Minimizing Issue Potential Fix[(./docs/ios-telegram-issue.md)
+4. [iOS Minimizing Issue Potential Fix](./docs/ios-telegram-issue.md)
 
 ## Setup and Installation
 
