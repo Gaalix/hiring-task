@@ -6,10 +6,15 @@
 - Send texts, photos, videos
 - Create big group chats (up to 200,000 people!)
 
-## Telegram Bots: Little Helpers
+## Telegram Bot API
 
-- Bots are like robot assistants
-- Can chat, play games, do tasks
+The Telegram Bot API allows developers to create bots that can interact with users and perform various tasks. Here are some key features:
+
+- Messaging: Send and receive messages, including text, photos, videos, and files.
+- Inline Mode: Allow users to interact with the bot directly from the chat input field.
+- Commands: Define custom commands that users can invoke.
+- Webhooks: Receive updates via webhooks for real-time interaction.
+- Payments: Integrate payment systems to handle transactions.
 
 ## APIs
 
