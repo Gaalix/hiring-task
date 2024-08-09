@@ -1,6 +1,6 @@
-# Telegram Bot Application for Online Gambling
+# Hiring task for Full Stack Developer
 
-This repository contains the implementation of a Telegram bot application for an online gambling site, developed as part of a hiring task for a Full Stack Developer position.
+In this repository you will find the 3 subtasks for the hiring task.
 
 ## Task Structure
 
@@ -19,6 +19,7 @@ Each subtask has its own setup and installation instructions. Please refer to th
 - Telegram Bot API
 - Node.js
 - Stripe API (Test Mode)
+- Express.js
 - Heroku (for bot hosting)
 
 ## Contributing
