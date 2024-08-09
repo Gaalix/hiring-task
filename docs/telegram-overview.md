@@ -14,7 +14,7 @@
 ## APIs
 
 1. Bot API: Make cool bots
-2. MTProto API: Create your own Telegram mobile apps
+2. MTProto API: More control of low level client stuff
 3. TDLib: Husle free telegram app (Library takes care of hard stuff like networking, encryption, etc)
 
 ## Cool API Tricks
