@@ -4,7 +4,7 @@ In this repository you will find the 3 subtasks for the hiring task.
 
 ## Task Structure
 
-The project is divided into three subtasks and a bonus task:
+The project is divided into three subtasks:
 
 1. [Understanding Telegram and Its APIs](./docs/telegram-overview.md)
 2. [Basic Telegram Bot Development](./docs/gambling-bot.md)
